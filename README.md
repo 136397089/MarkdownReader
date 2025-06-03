@@ -17,7 +17,7 @@
 1. 安装依赖:
 
 ```bash
-pip install flask markdown cryptography pillow -i https://pypi.tuna.tsinghua.edu.cn/simple --user
+pip install flask markdown cryptography pillow 
 ```
 2. 运行应用:
 
