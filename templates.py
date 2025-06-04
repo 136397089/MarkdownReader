@@ -236,7 +236,7 @@ LOGIN_TEMPLATE = '''
 </html>
 '''
 
-# 主页面HTML模板 - 添加了图片支持说明
+# 主页面HTML模板 
 MAIN_TEMPLATE = '''
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -609,7 +609,52 @@ MAIN_TEMPLATE = '''
             margin: 1.5em 0;
             border-left: 3px solid #007bff;
         }
-        
+        /* 有序列表缩进 */
+        .markdown-content ol {
+            padding-left: 2em;
+            margin: 1em 0;
+        }
+
+        .markdown-content ol li {
+            margin-bottom: 0.5em;
+            padding-left: 0.5em;
+        }
+
+        /* 无序列表缩进 */
+        .markdown-content ul {
+            padding-left: 2em;
+            margin: 1em 0;
+        }
+
+        .markdown-content ul li {
+            margin-bottom: 0.5em;
+            padding-left: 0.5em;
+        }
+
+        /* 嵌套列表额外缩进 */
+        .markdown-content ol ol,
+        .markdown-content ul ul,
+        .markdown-content ol ul,
+        .markdown-content ul ol {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            padding-left: 1.5em;
+        }
+
+        /* 列表项内容对齐 */
+        .markdown-content li {
+            line-height: 1.6;
+        }
+
+        /* 多级嵌套列表的递进缩进 */
+        .markdown-content li li {
+            font-size: 0.95em;
+        }
+
+        .markdown-content li li li {
+            font-size: 0.9em;
+        }
+
         .loading {
             text-align: center;
             color: #666;
